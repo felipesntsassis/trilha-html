@@ -1,6 +1,14 @@
+:root {
+    --blue-sky: #0369a1;
+    --slate: #475569;
+}
+
 html, body {
     margin: 0;
+    font-family: 'Montserrat', 'Arial', sans-serif;
+    color: var(--slate);
 }
+
 body {
     background-color: #f1f1f1;
     display: flex;
@@ -13,24 +21,53 @@ body {
     margin: 0 auto;
     background-color: aquamarine;
 }
+
 .main {
     display: flex;
     flex-flow: column;
     width: 85%;
 }
+
 .menu {
     width: 15%;
     background-color: aqua;
     padding: 10px 20px 0px;
 }
+
 .header {
-    background-color: rgb(5, 108, 108);
-    min-height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    min-height: 80px;
+    padding: 16px;
 }
+
+.header h3 {
+    margin: 0;
+    padding: 0;
+    color: var(--slate);
+}
+
+.header h3 strong {
+    color: var(--blue-sky);
+}
+
+.header .logo {
+    height: 80px;
+}
+
 .content {
     background-color: white;
     min-height: 300px;
     padding: 20px;
+}
+
+.content .cover {
+    width: 100%;
+    border-top-left-radius: 24px;
+    border-bottom-right-radius: 24px;
 }
 .footer {
     background-color: rgb(99, 56, 240);
