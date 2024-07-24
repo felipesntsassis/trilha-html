@@ -3,6 +3,7 @@
     --blue-sky-500: #0ea5e9;
     --blue-sky-600: #0284c7;
     --slate: #475569;
+    --white-slate: #f1f5f9;
     --white: #ffffff;
 }
 
@@ -126,6 +127,48 @@ body {
     text-align: left;
 }
 
+table {
+    border-collapse: collapse;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+table thead tr {
+    background-color: var(--blue-sky);
+    border-top-right-radius: 8px;
+    color: #fff;
+}
+
+table tbody tr {
+    background-color: var(--white);
+}
+
+table tbody tr:hover,
+table tbody tr:nth-child(even) {
+    background-color: var(--white-slate);
+}
+
+table thead tr th:first-child {
+    border-top-left-radius: 8px;
+}
+
+table thead tr th:last-child {
+    border-top-right-radius: 8px;
+}
+
+table thead tr th,
+table tbody tr td {
+    padding: 8px;
+}
+
+table thead tr th {
+    font-weight: 600;
+}
+
+table tbody tr td {
+    border-bottom: 1px solid var(--blue-sky);
+}
+
 ul li span {
     display: inline-block;
 }
@@ -170,6 +213,14 @@ ul li {
     font-size: 1.25rem;
 }
 
+.text-center {
+    text-align: center;
+}
+
 .text-justify {
     text-align: justify;
+}
+
+.text-start {
+    text-align: left;
 }
