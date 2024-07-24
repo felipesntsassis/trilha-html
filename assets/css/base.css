@@ -2,7 +2,9 @@
     --blue-sky: #0369a1;
     --blue-sky-500: #0ea5e9;
     --blue-sky-600: #0284c7;
+    --red: #b91c1c;
     --slate: #475569;
+    --medium-slate: #94a3b8;
     --white-slate: #f1f5f9;
     --white: #ffffff;
 }
@@ -11,6 +13,10 @@ html, body {
     margin: 0;
     font-family: 'Montserrat', 'Arial', sans-serif;
     color: var(--slate);
+}
+
+input, textarea {
+    outline: none;
 }
 
 body {
@@ -175,6 +181,67 @@ ul li span {
 
 ul li {
     margin-top: 8px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+
+form .row label {
+    margin-bottom: 6px;
+}
+
+form .row label.required::before {
+    content: '* ';
+    color: var(--red);
+}
+
+form .row label::after {
+    content: ':'
+}
+
+form .row input,
+form .row textarea {
+    padding: 8px 16px;
+    color: var(--blue-sky);
+    border: 2px solid var(--blue-sky);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form .row input::placeholder,
+form .row textarea::placeholder {
+    color: var(--medium-slate);
+}
+
+form .row input:focus,
+form .row textarea:focus {
+    border: 2px solid var(--blue-sky-500);
+}
+
+form .row-action {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+form .row-action button {
+    background-color: var(--blue-sky);
+    border: 1px solid var(--blue-sky);
+    font-size: 16px;
+    padding: 8px 24px;
+    border-radius: 8px;
+    color: var(--white);
+    cursor: pointer;
 }
 
 .mb-1 {
